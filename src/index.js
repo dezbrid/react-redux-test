@@ -17,5 +17,5 @@ const Root=(
     </BrowserRouter>
     </Provider>
 );
-
+/**prueba commint */
 ReactDOM.render(Root,document.getElementById('root'));
