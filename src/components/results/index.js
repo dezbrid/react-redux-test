@@ -5,6 +5,8 @@ import Page from './page';
 
 class Results extends Component{
     render(){
+        const {suggestions}= this.props;
+        console.log (suggestions)
         return(
             <Page/>
         );
@@ -17,6 +19,6 @@ const mapStatetoProps=(state)=>{
 
     };
 };
-connect(mapStatetoProps);
+const component = connect(mapStatetoProps)(Results);
 
-export default Results
+export default component
