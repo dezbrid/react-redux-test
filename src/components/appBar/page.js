@@ -2,8 +2,15 @@ import React from 'react';
 import {AppBar,Toolbar,Typography} from '@material-ui/core'; 
 import {AccountCircle} from '@material-ui/icons';
 import Autocomplete from '../autocomplete';
+import './style.css';
 
 function Page(props){
+    const {
+        text,
+        suggestions,
+        onChangeText,
+        onChangeSelection
+    }= props;
     return(
         <AppBar position="static">
             <Toolbar className="appbar">
@@ -11,10 +18,10 @@ function Page(props){
                     Titulo
                 </Typography>
                 <Autocomplete
-                text={'react'}
-                suggestions={[]}
-                onChangeText={(text)=>{}}
-                onChangeSelection={(text)=>{}}
+                text={text}
+                suggestions={suggestions}
+                onChangeText={onChangeText}
+                onChangeSelection={onChangeSelection}
                 />
 
                 <AccountCircle/>
