@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import Page from './page';
 
 
-class IAppBar extends Component{
+class AppBar extends Component{
     render(){
         return(
             <Page/>
@@ -10,4 +10,4 @@ class IAppBar extends Component{
     }
 }
 
-export default IAppBar
+export default AppBar
