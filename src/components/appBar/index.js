@@ -18,6 +18,7 @@ class IAppBar extends Component{
     }
     onChangeText(text){
         this.setState({text});
+        this.props.findSuggestions(text);
 
     }
     onChangeSelection(text){
@@ -46,12 +47,16 @@ const mapStatetoProps=(state)=>{
 
     };
 };
-const mapDispatchtoProps=(dispatch)=>{
+/*const mapDispatchtoProps=(dispatch)=>{
     return{
         findSuggestions:(text)=>dispatch(findSuggestions(text)),
     };
 
+};*/
+const mapDispatchtoProps={
+    findSuggestions,
 };
+
 const component = connect(mapStatetoProps,mapDispatchtoProps)(IAppBar);
 
 export default component
