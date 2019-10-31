@@ -15,7 +15,7 @@ function Page(props){
         <AppBar position="static">
             <Toolbar className="appbar">
                 <Typography variant="h6" color ="inherit">
-                    Titulo
+                    React Redux
                 </Typography>
                 <Autocomplete
                 text={text}

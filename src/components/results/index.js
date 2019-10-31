@@ -5,17 +5,18 @@ import Page from './page';
 
 class Results extends Component{
     render(){
-        const {suggestions}= this.props;
-        console.log (suggestions)
+        const {results}= this.props;
+       
         return(
-            <Page/>
+            <Page
+            results={results}/>
         );
     }
 }
 const mapStatetoProps=(state)=>{
 
     return{
-        suggestions:state.suggestions,
+        results:state.results,
 
     };
 };
