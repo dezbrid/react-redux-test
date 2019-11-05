@@ -23,6 +23,7 @@ class IAppBar extends Component{
 
     }
     onChangeSelection(text){
+        
         this.setState({text});
         this.props.findResults(text);
 

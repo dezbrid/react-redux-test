@@ -43,15 +43,17 @@ class Autocomplete extends Component {
                             this.setState({ isOpen: false });
                         }
                     }}
-                    onBlur={() => {
+                   /* onBlur={() => {
                         setTimeout(() => this.setState({ isOpen: false }), 100);
-                    }}
+                        
+                    }}*/
                     onFocus={() => {
                         if (text) {
                             this.setState({ isOpen: true });
                         }
                     }}
                     onKeyPress={(event) => {
+                        
                         if (event.key === 'Enter' && text) {
                             onChangeSelection(text);
                         }
@@ -64,6 +66,7 @@ class Autocomplete extends Component {
                         key={suggestion.id}
                         component="div"
                         onClick={() => {
+                            
                             onChangeSelection(suggestion.title);
                             this.setState({ isOpen: false });
                         }}

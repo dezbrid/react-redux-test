@@ -12,7 +12,7 @@ function Page(props){
         onChangeSelection
         
     }= props;
-    console.log(text)
+    
     return(
         <AppBar position="static">
             <Toolbar className="appbar">
