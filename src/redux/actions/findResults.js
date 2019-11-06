@@ -3,7 +3,7 @@ export const type='findResult'
 const findResult =text=>{
     return{
         type,
-        paylosd:text,
+        payload:text,
     }
 }
 export default findResult

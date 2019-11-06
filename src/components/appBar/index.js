@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Page from './page';
 import {connect} from 'react-redux';
+import { withRouter} from 'react-router-dom';
 import findSuggestions from '../../redux/actions/findSuggestions';
 import findResults from '../../redux/actions/findResults';
 
@@ -26,6 +27,7 @@ class IAppBar extends Component{
         
         this.setState({text});
         this.props.findResults(text);
+        this.props.history.push('/results');
 
     }
 
@@ -62,7 +64,7 @@ const mapDispatchtoProps={
     findResults
 };
 
-const component = connect(mapStatetoProps,mapDispatchtoProps)(IAppBar);
+const component = withRouter(connect(mapStatetoProps,mapDispatchtoProps)(IAppBar));
 
 export default component
 

@@ -1,4 +1,4 @@
-import items from '../../components/data/items';
+import items from '../../data/items';
 import {type as findSuggestionsType} from '../actions/findSuggestions';
 const defaultState =[];
 
