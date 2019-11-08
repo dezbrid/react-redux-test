@@ -43,10 +43,7 @@ class Autocomplete extends Component {
                             this.setState({ isOpen: false });
                         }
                     }}
-                   /* onBlur={() => {
-                        setTimeout(() => this.setState({ isOpen: false }), 100);
-                        
-                    }}*/
+
                     onFocus={() => {
                         if (text) {
                             this.setState({ isOpen: true });
